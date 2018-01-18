@@ -26,5 +26,20 @@ function wordsInReverse(string) {
 }
 
 function countPositivesSumNegatives(numbers) {
+  let pos_num = 0;
+  let sum_neg_num = 0;
 
+  for (var num in numbers) {
+    if (numbers[num] > 0) {
+      // count the number of positive numbers
+      pos_num++;
+    }
+    else {
+      // sum negative numbers
+      sum_neg_num += numbers[num];
+    }
+  }
+
+  let num_array = [pos_num, sum_neg_num];
+  return num_array;
 }
